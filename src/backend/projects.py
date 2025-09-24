@@ -4,7 +4,7 @@ from datetime import datetime, date
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-from .models import db, User, Project, ProjectStatus, UserRole
+from models import db, User, Project, ProjectStatus, UserRole
 
 
 projects_bp = Blueprint("projects", __name__, url_prefix="/api/projects")

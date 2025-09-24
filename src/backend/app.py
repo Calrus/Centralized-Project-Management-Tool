@@ -2,10 +2,10 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 
-from .config import Config
-from .models import db
-from .auth import auth_bp
-from .projects import projects_bp
+from config import Config
+from models import db
+from auth import auth_bp
+from projects import projects_bp
 
 
 def create_app() -> Flask:
@@ -43,8 +43,8 @@ def create_app() -> Flask:
         return jsonify({"status": "ok"})
 
     # Initialize database tables at startup
-    # with app.app_context():
-    #     db.create_all()
+    with app.app_context():
+        db.create_all()
 
     return app
 

@@ -15,7 +15,7 @@ class Config:
     # Example: mysql+pymysql://user:password@localhost:3306/todd
     SQLALCHEMY_DATABASE_URI = os.getenv(
         "DATABASE_URL",
-        "mysql+pymysql://root@localhost:3306/todd",
+        "mysql+pymysql://root:password@localhost:3306/CAPSTONE",
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

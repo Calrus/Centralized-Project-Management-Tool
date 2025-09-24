@@ -4,7 +4,7 @@ from flask import Blueprint, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 
-from .models import db, User, UserRole, WorkerType
+from models import db, User, UserRole, WorkerType
 
 
 auth_bp = Blueprint("auth", __name__, url_prefix="/api/auth")
